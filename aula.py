@@ -1,63 +1,48 @@
-# Leitura de um número inteiro
-numero = int(input("Digite um número inteiro: "))
+mensagem = "Bem-vindo ao sistema!"
+print(mensagem)
 
-# Cálculo do quadrado
-quadrado = numero ** 2
+valor_booleano = True
+print(type(valor_booleano))
 
-# Apresentação do resultado
-print(f"O quadrado de {numero} é {quadrado}.")
+numero_decimal1 = 4.5
+numero_decimal2 = 2.3
+resultado_multiplicacao = numero_decimal1 * numero_decimal2
+print(resultado_multiplicacao)
 
+numero_inteiro1 = 10
+numero_inteiro2 = 3
+resultado_divisao = numero_inteiro1 / numero_inteiro2
+print(resultado_divisao)
 
+numero_inteiro3 = 15
+numero_inteiro4 = 7
+resultado_subtracao = numero_inteiro3 - numero_inteiro4
+print(resultado_subtracao)
 
-# Criando variáveis para primeiro nome e sobrenome
-primeiro_nome = "Rayssa"
-sobrenome = "Thereza"
+numero_inteiro5 = 10
+numero_inteiro6 = 3
+resultado_divisao_inteira = numero_inteiro5 // numero_inteiro6
+print(resultado_divisao_inteira)
 
-# Concatenando para formar o nome completo
-nome_completo = primeiro_nome + " " + sobrenome
+decimal1 = 1.2
+decimal2 = 3.4
+decimal3 = 0.5
+decimal4 = 2.0
+resultado_multiplicacao4 = decimal1 * decimal2 * decimal3 * decimal4
+print(resultado_multiplicacao4)
 
-# Exibindo o nome completo
-print("Nome completo:", nome_completo)
+numero = 7
+dobro = numero * 2
+print(dobro)
 
+# Sistema de Cadastro
+nome = input("Digite seu nome: ")
+idade = input("Digite sua idade: ")
+email = input("Digite seu e-mail: ")
 
-
-# Solicita dois números inteiros ao usuário
-num1 = int(input("Digite o primeiro número inteiro: "))
-num2 = int(input("Digite o segundo número inteiro: "))
-
-# Converte os números para strings e concatena
-resultado = str(num1) + str(num2)
-
-# Exibe o resultado da concatenação
-print("Resultado da concatenação:", resultado)
-
-
-# Armazena a palavra "Python"
-linguagem = "Python"
-
-# Número inteiro a ser adicionado
-versao = 3
-
-# Concatenação (convertendo o número para string)
-resultado = linguagem + str(versao)
-
-# Exibe o resultado
-print("Resultado da concatenação:", resultado)
-
-
-
-
-
-# Declara uma variável com uma frase
-frase = "Hoje eu estou aprendendo sobre "
-
-# Solicita ao usuário uma palavra
-palavra = input("Digite uma palavra para completar a frase: ")
-
-# Concatena a palavra no final da frase
-frase_completa = frase + palavra
-
-# Exibe o resultado final
-print("Frase completa:", frase_completa)
+print(f"\nCadastro realizado com sucesso!")
+print(f"Nome: {nome}")
+print(f"Idade: {idade}")
+print(f"E-mail: {email}")
 
 
