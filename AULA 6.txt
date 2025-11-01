@@ -1,0 +1,68 @@
+# 1
+resultado1 = (4 * 6) / 2
+print("Resultado:", resultado1)
+
+# 2
+resultado2 = 5 + 7
+print("Resultado:", resultado2)
+
+# 3
+resultado3 = 3 ** 4
+print("Resultado:", resultado3)
+
+# 4
+resultado4 = (8 + 12 + 15) / 3
+print("Resultado:", resultado4)
+
+# 5
+resultado5 = (2 - 10) * 5
+print("Resultado:", resultado5)
+
+# 6
+resultado6 = (27 / 3) + 5
+print("Resultado:", resultado6)
+
+
+# --------------------------
+# Exercícios com variáveis / print() / input()(opcional)
+# --------------------------
+
+# 7
+resultado7 = 17 % 4
+print("Resultado:", resultado7)
+
+# 8
+resultado8 = (9 * 3) ** 2
+print("Resultado:", resultado8)
+
+# 9
+resultado9 = 81 ** 0.5  # raiz quadrada de 81
+print("Resultado:", resultado9)
+
+# 10
+resultado10 = 20 + (3 * 4)
+print("Resultado:", resultado10)
+
+# 11
+resultado11 = (15 * 2) - 7
+print("Resultado:", resultado11)
+
+# 12
+resultado12 = 5 ** 3
+print("Resultado:", resultado12)
+
+# 13
+resultado13 = (17 + 21 + 25) / 3
+print("Resultado:", resultado13)
+
+# 14
+resultado14 = (11 * 2) + 7
+print("Resultado:", resultado14)
+
+# 15
+resultado15 = ((3 * 8) - 15) / 2
+print("Resultado:", resultado15)
+
+# 16
+resultado16 = 2 ** 10
+print("Resultado:", resultado16)
