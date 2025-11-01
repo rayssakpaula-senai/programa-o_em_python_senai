@@ -1,0 +1,79 @@
+# 1*
+# Peça para o usuário digitar um número e verifique se é positivo, negativo ou zero.
+
+num = float(input("Digite um número: "))
+
+if num > 0:
+    print("O número é positivo.")
+elif num < 0:
+    print("O número é negativo.")
+else:
+    print("O número é zero.")
+
+# 2*
+# Peça para o usuário digitar a idade e verifique se a pessoa pode votar.
+
+idade = int(input("\nDigite sua idade: "))
+
+if idade >= 16:
+    print("Você pode votar.")
+else:
+    print("Você ainda não pode votar.")
+
+# 3*
+# Declare uma variável com um número e determine se é par ou ímpar.
+
+numero = int(input("\nDigite um número para verificar se é par ou ímpar: "))
+
+if numero % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+
+# 4*
+# Usuário digita 3 números para formar um triângulo e o programa identifica o tipo.
+
+a = float(input("\nDigite o lado A do triângulo: "))
+b = float(input("Digite o lado B do triângulo: "))
+c = float(input("Digite o lado C do triângulo: "))
+
+# Primeiro, verifica se é possível formar um triângulo
+if (a < b + c) and (b < a + c) and (c < a + b):
+    if a == b == c:
+        print("Triângulo equilátero.")
+    elif a == b or a == c or b == c:
+        print("Triângulo isósceles.")
+    else:
+        print("Triângulo escaleno.")
+else:
+    print("Os valores informados não formam um triângulo.")
+
+# 5*
+# Determine se um número é múltiplo de 5 e 7.
+
+num = int(input("\nDigite um número: "))
+
+if num % 5 == 0 and num % 7 == 0:
+    print("O número é múltiplo de 5 e 7.")
+else:
+    print("O número NÃO é múltiplo de 5 e 7.")
+
+# 6*
+# Verifique se um número é positivo e maior que 10.
+
+n = float(input("\nDigite um número: "))
+
+if n > 0 and n > 10:
+    print("O número é positivo e maior que 10.")
+else:
+    print("O número não é positivo e maior que 10 ao mesmo tempo.")
+
+# 7*
+# Verifique se um número é divisível por 3 ou 5.
+
+valor = int(input("\nDigite um número: "))
+
+if valor % 3 == 0 or valor % 5 == 0:
+    print("O número é divisível por 3 ou por 5.")
+else:
+    print("O número não é divisível por 3 nem por 5.")
