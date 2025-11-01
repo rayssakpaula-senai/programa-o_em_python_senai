@@ -1,0 +1,48 @@
+print ("Exercício:")
+for num in range(2, 21, 2):  # começa em 2, vai até 20, pulando de 2 em 2
+    print(num)
+
+# ----------------------------------------------------
+
+# Exercício 1
+# Crie uma lista com números inteiros de 1 a 10 e imprima
+
+print("\nExercício 1:")
+numeros = list(range(1, 11))  # gera [1, 2, 3, ..., 10]
+print(numeros)
+
+# ----------------------------------------------------
+
+# Exercício 2
+# Acesse e imprima o terceiro elemento da lista
+
+print("\nExercício 2:")
+print("O terceiro elemento da lista é:", numeros[2])  # índice 2 = terceiro elemento
+
+# ----------------------------------------------------
+
+# Exercício 3
+# Adicione o número 9 à lista e imprima
+
+print("\nExercício 3:")
+numeros.append(9)
+print("Lista atualizada:", numeros)
+
+# ----------------------------------------------------
+
+# Exercício 4
+# Remova o número 5 da lista e imprima
+
+print("\nExercício 4:")
+numeros.remove(5)
+print("Lista após remover o número 5:", numeros)
+
+# ----------------------------------------------------
+
+# Exercício 5
+# Crie uma lista de carros e concatene com a lista 'numeros'
+
+print("\nExercício 5:")
+carros = ["Fusca", "Civic", "Corolla"]
+resultado = numeros + carros
+print("Lista concatenada:", resultado)
