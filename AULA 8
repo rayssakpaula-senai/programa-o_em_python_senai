@@ -1,0 +1,89 @@
+
+print("Olá, qual é o seu nome?")
+nome = input("Digite seu nome: ")
+print(f"Olá, {nome}! Como você está?")
+nome = input("responda como está: ")
+import random
+
+# Dicionário com novas charadas, respostas corretas e alternativas
+charadas_com_alternativas = {
+    "O que é o que é que tem cabeça, mas não pensa?": {
+        "resposta_correta": "O alfinete.",
+        "alternativas": ["O alfinete", "O lápis", "A lâmpada", "A maçã"]
+    },
+    "O que é o que é que sempre tem algo para comer, mas nunca come?": {
+        "resposta_correta": "O prato.",
+        "alternativas": ["O prato", "O copo", "A colher", "A faca"]
+    },
+    "O que é o que é que, quanto mais você tira, maior fica?": {
+        "resposta_correta": "O buraco.",
+        "alternativas": ["O buraco", "O balde", "A caixa", "A piscina"]
+    },
+    "O que é o que é que tem muitos dentes, mas não morde?": {
+        "resposta_correta": "O pente.",
+        "alternativas": ["O pente", "O sapato", "O relógio", "A escova"]
+    },
+    "O que é o que é que pode ser visto, mas nunca tocado?": {
+        "resposta_correta": "O espelho.",
+        "alternativas": ["O espelho", "A luz", "A sombra", "A lua"]
+    },
+    "O que é o que é que sempre sobe, mas nunca desce?": {
+        "resposta_correta": "A idade.",
+        "alternativas": ["A idade", "O balão", "A escada", "A fumaça"]
+    },
+    "O que é o que é que você pode segurar com uma mão, mas nunca com as duas?": {
+        "resposta_correta": "O cotovelo.",
+        "alternativas": ["O cotovelo", "A mão", "A cabeça", "O coração"]
+    },
+    "O que é o que é que sempre está na sua frente, mas nunca pode ser visto?": {
+        "resposta_correta": "O futuro.",
+        "alternativas": ["O futuro", "O espelho", "O passado", "A sombra"]
+    },
+    "O que é o que é que você nunca deve comer antes de ser servido?": {
+        "resposta_correta": "O prato.",
+        "alternativas": ["O prato", "O copo", "A comida", "O garfo"]
+    },
+    "O que é o que é que tem asas, mas não voa?": {
+        "resposta_correta": "O ventilador.",
+        "alternativas": ["O ventilador", "O pássaro", "A borboleta", "O avião"]
+    }
+}
+
+# Função para exibir charada, alternativas e verificar resposta
+def jogar_charada():
+    for charada, dados in charadas_com_alternativas.items():
+        print(f"\nCharada: {charada}")
+        
+        # Embaralha as alternativas, mas mantém a resposta correta
+        alternativas = dados["alternativas"]
+        alternativas_copia = alternativas[:]
+        random.shuffle(alternativas_copia)
+
+        # Exibe as alternativas embaralhadas
+        for i, alternativa in enumerate(alternativas_copia, 1):
+            print(f"{i}. {alternativa}")
+        
+        # Pede a resposta do usuário
+        try:
+            resposta_usuario = int(input("\nEscolha a alternativa (1, 2, 3, ou 4): "))
+            
+            # Verifica se a escolha está entre 1 e 4
+            if resposta_usuario not in [1, 2, 3, 4]:
+                print("Número inválido! Escolha entre 1 e 4.")
+                continue
+
+            # Obtém a resposta escolhida pelo usuário
+            resposta_escolhida = alternativas_copia[resposta_usuario - 1]
+
+            # Verifica se a resposta está correta
+            if resposta_escolhida == dados["resposta_correta"]:
+                print("Resposta correta! 🎉")
+            else:
+                print(f"Resposta errada! A resposta correta é: {dados['resposta_correta']}")
+        
+        except ValueError:
+            print("Por favor, digite um número válido entre 1 e 4.")
+
+# Iniciar o jogo de charadas
+jogar_charada()
+
