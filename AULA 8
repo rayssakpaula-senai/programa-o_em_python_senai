@@ -1,294 +1,116 @@
-# Peça para o usuário digitar um número e verifique se é positivo, negativo ou zero.
+# Cadastro de clientes
+cliente1_nome = input("Digite o nome do cliente 1: ")
+cliente1_idade = int(input("Digite a idade do cliente 1: "))
 
-num = float(input("Digite um número: "))
+cliente2_nome = input("Digite o nome do cliente 2: ")
+cliente2_idade = int(input("Digite a idade do cliente 2: "))
 
-if num > 0:
-    print("O número é positivo.")
-elif num < 0:
-    print("O número é negativo.")
+cliente3_nome = input("Digite o nome do cliente 3: ")
+cliente3_idade = int(input("Digite a idade do cliente 3: "))
+
+# Preços dos quartos
+preco_simples = 100.00
+preco_duplo = 150.00
+preco_luxo = 250.00
+
+# Cadastro das escolhas de quartos
+# Cliente 1
+print("\nCliente 1 - Escolha do quarto:")
+print("1 - Simples (R$ 100,00 por dia)")
+print("2 - Duplo (R$ 150,00 por dia)")
+print("3 - Luxo (R$ 250,00 por dia)")
+cliente1_quarto = int(input("Escolha o número do quarto para o cliente 1 (1, 2 ou 3): "))
+
+# Cliente 2
+print("\nCliente 2 - Escolha do quarto:")
+print("1 - Simples (R$ 100,00 por dia)")
+print("2 - Duplo (R$ 150,00 por dia)")
+print("3 - Luxo (R$ 250,00 por dia)")
+cliente2_quarto = int(input("Escolha o número do quarto para o cliente 2 (1, 2 ou 3): "))
+
+# Cliente 3
+print("\nCliente 3 - Escolha do quarto:")
+print("1 - Simples (R$ 100,00 por dia)")
+print("2 - Duplo (R$ 150,00 por dia)")
+print("3 - Luxo (R$ 250,00 por dia)")
+cliente3_quarto = int(input("Escolha o número do quarto para o cliente 3 (1, 2 ou 3): "))
+
+# Quantidade de dias de estadia
+cliente1_dias = int(input(f"\nQuantos dias {cliente1_nome} ficará no hotel? "))
+cliente2_dias = int(input(f"Quantos dias {cliente2_nome} ficará no hotel? "))
+cliente3_dias = int(input(f"Quantos dias {cliente3_nome} ficará no hotel? "))
+
+# Cálculo do valor das estadias
+
+# Cliente 1
+if cliente1_quarto == 1:
+    valor_cliente1 = preco_simples * cliente1_dias
+elif cliente1_quarto == 2:
+    valor_cliente1 = preco_duplo * cliente1_dias
+elif cliente1_quarto == 3:
+    valor_cliente1 = preco_luxo * cliente1_dias
 else:
-    print("O número é zero.")
+    valor_cliente1 = 0  # Caso o cliente escolha uma opção inválida
 
-# 2*
-# Peça para o usuário digitar a idade e verifique se a pessoa pode votar.
-
-idade = int(input("\nDigite sua idade: "))
-
-if idade >= 16:
-    print("Você pode votar.")
+# Cliente 2
+if cliente2_quarto == 1:
+    valor_cliente2 = preco_simples * cliente2_dias
+elif cliente2_quarto == 2:
+    valor_cliente2 = preco_duplo * cliente2_dias
+elif cliente2_quarto == 3:
+    valor_cliente2 = preco_luxo * cliente2_dias
 else:
-    print("Você ainda não pode votar.")
+    valor_cliente2 = 0  # Caso o cliente escolha uma opção inválida
 
-# 3*
-# Declare uma variável com um número e determine se é par ou ímpar.
-
-numero = int(input("\nDigite um número para verificar se é par ou ímpar: "))
-
-if numero % 2 == 0:
-    print("O número é par.")
+# Cliente 3
+if cliente3_quarto == 1:
+    valor_cliente3 = preco_simples * cliente3_dias
+elif cliente3_quarto == 2:
+    valor_cliente3 = preco_duplo * cliente3_dias
+elif cliente3_quarto == 3:
+    valor_cliente3 = preco_luxo * cliente3_dias
 else:
-    print("O número é ímpar.")
+    valor_cliente3 = 0  # Caso o cliente escolha uma opção inválida
 
-# 4*
-# Usuário digita 3 números para formar um triângulo e o programa identifica o tipo.
+# Exibição do valor total a ser pago por cada cliente
 
-a = float(input("\nDigite o lado A do triângulo: "))
-b = float(input("Digite o lado B do triângulo: "))
-c = float(input("Digite o lado C do triângulo: "))
+print(f"\nResumo da reserva:")
 
-# Primeiro, verifica se é possível formar um triângulo
-if (a < b + c) and (b < a + c) and (c < a + b):
-    if a == b == c:
-        print("Triângulo equilátero.")
-    elif a == b or a == c or b == c:
-        print("Triângulo isósceles.")
-    else:
-        print("Triângulo escaleno.")
+# Cliente 1
+if valor_cliente1 > 0:
+    print(f"{cliente1_nome} escolheu o quarto ", end="")
+    if cliente1_quarto == 1:
+        print("Simples.")
+    elif cliente1_quarto == 2:
+        print("Duplo.")
+    elif cliente1_quarto == 3:
+        print("Luxo.")
+    print(f"Total a pagar: R$ {valor_cliente1:.2f}")
 else:
-    print("Os valores informados não formam um triângulo.")
+    print(f"{cliente1_nome} fez uma escolha inválida de quarto!")
 
-# 5*
-# Determine se um número é múltiplo de 5 e 7.
-
-num = int(input("\nDigite um número: "))
-
-if num % 5 == 0 and num % 7 == 0:
-    print("O número é múltiplo de 5 e 7.")
+# Cliente 2
+if valor_cliente2 > 0:
+    print(f"{cliente2_nome} escolheu o quarto ", end="")
+    if cliente2_quarto == 1:
+        print("Simples.")
+    elif cliente2_quarto == 2:
+        print("Duplo.")
+    elif cliente2_quarto == 3:
+        print("Luxo.")
+    print(f"Total a pagar: R$ {valor_cliente2:.2f}")
 else:
-    print("O número NÃO é múltiplo de 5 e 7.")
+    print(f"{cliente2_nome} fez uma escolha inválida de quarto!")
 
-# 6*
-# Verifique se um número é positivo e maior que 10.
-
-n = float(input("\nDigite um número: "))
-
-if n > 0 and n > 10:
-    print("O número é positivo e maior que 10.")
+# Cliente 3
+if valor_cliente3 > 0:
+    print(f"{cliente3_nome} escolheu o quarto ", end="")
+    if cliente3_quarto == 1:
+        print("Simples.")
+    elif cliente3_quarto == 2:
+        print("Duplo.")
+    elif cliente3_quarto == 3:
+        print("Luxo.")
+    print(f"Total a pagar: R$ {valor_cliente3:.2f}")
 else:
-    print("O número não é positivo e maior que 10 ao mesmo tempo.")
-
-# 7*
-# Verifique se um número é divisível por 3 ou 5.
-
-valor = int(input("\nDigite um número: "))
-
-if valor % 3 == 0 or valor % 5 == 0:
-    print("O número é divisível por 3 ou por 5.")
-else:
-    print("O número não é divisível por 3 nem por 5.")
-
-
-    estoque = {
-    'frutas':{
-        'uvas':
-              {'quantidade':30,
-               'preço':10.55,
-               },
-        'bananas':{
-                'quantidade':20,
-                'preço':15.25
-
-        },
-     
-        },
-    'eletronicos':{
-        'fone':{
-                'quantidade':10,
-                'preço':500.55
-        },
-        'iphone':{
-                'quantidade':5,
-                'preço':17000
-        }
-
-    }
-    
-    }
-
-
-carrinho =  []
-total =  []
-
-senha =  '280408'
-login = '@RAX'
-
-dig_senha =  input('Digite sua senha: ')
-dig_login =  input('Digite seu login: ')
-
-if dig_login == login and dig_senha == senha:
-    print('Seja bem vindo(a))')
-    pedir  =  input('Deseja fazer o pedido: sim ou não?')
-    if pedir == 'sim':
-        print('estoque: ', 'estoque, escolha se produto: ')
-        secao = input('Digite a seção -  frutas ou eletronicos')
-        produto =  input(f'escolha o produto{estoque[secao]} ')
-        print('Produto:', estoque[secao][produto])
-        carrinho.append(produto)
-        total.append(estoque[secao][produto]['preço'])
-        
-        estoque[secao][produto]['quantidade'] - 1
-        print(estoque)
-
-        print('CArrinho', carrinho)
-        print('R$', total)
-        print('------------------------')
-        formapag = ['1 PIX', '2 - CC', '3 - CD']
-        pag =  int(input('Digite a forma de pagamento: '))
-        print('FORMA DE PAGAMENTO', formapag[pag])
-
-    else:
-        print('Obrigada volte sempre')    
-else:
-    print('Algo foi digitado errado... tente novamente')
-
-
-    import random 
-
-ppt_maquina  =  ['🧻','🪨','✂️']
-ppt_jogador  =  ['🧻','🪨','✂️']
-
-aleatorio = random.choice(ppt_maquina)
-escolha  =  int(input('''
-0 - 🧻
-1 - 🪨
-2 - ✂️
-'''))
-
-if aleatorio == ppt_jogador[escolha]:
-    print('EMPATE!')
-    print('A maquina escolheu', aleatorio)
-    print('Você escolheu', ppt_jogador[escolha])
-
-elif aleatorio == '🧻'  and   ppt_jogador[escolha] == '🪨':
-    print('O computador ganhou!')
-    print('A maquina escolheu', aleatorio)
-    print('Você escolheu', ppt_jogador[escolha])    
-
-
-elif aleatorio == '🪨' and  ppt_jogador[escolha] == '✂️':
-    print('O computador ganhou!')
-    print('A maquina escolheu', aleatorio)
-    print('Você escolheu', ppt_jogador[escolha]) 
-
-
-elif aleatorio == '✂️'  and   ppt_jogador[escolha] == '🧻':
-    print('O computador ganhou!')
-    print('A maquina escolheu', aleatorio)
-    print('Você escolheu', ppt_jogador[escolha]) 
-
-
-
-
-elif  ppt_jogador[escolha] == '🧻'  and  aleatorio == '🪨':
-    print('Você ganhou!')
-    print('A maquina escolheu', aleatorio)
-    print('Você escolheu', ppt_jogador[escolha])    
-
-elif ppt_jogador[escolha] == '🪨'  and   aleatorio == '✂️':
-    print('Você ganhou!')
-    print('A maquina escolheu', aleatorio)
-    print('Você escolheu', ppt_jogador[escolha]) 
-
-
-elif ppt_jogador[escolha] == '✂️'  and   aleatorio  == '🧻':
-    print('Você ganhou!')
-    print('A maquina escolheu', aleatorio)
-    print('Você escolheu', ppt_jogador[escolha])
-
-
-    # Dicionário com novas charadas, respostas corretas e alternativas
-charadas_com_alternativas = {
-    "O que é o que é que tem cabeça, mas não pensa?": {
-        "resposta_correta": "O alfinete.",
-        "alternativas": ["O alfinete", "O lápis", "A lâmpada", "A maçã"]
-    },
-    "O que é o que é que sempre tem algo para comer, mas nunca come?": {
-        "resposta_correta": "O prato.",
-        "alternativas": ["O prato", "O copo", "A colher", "A faca"]
-    },
-    "O que é o que é que, quanto mais você tira, maior fica?": {
-        "resposta_correta": "O buraco.",
-        "alternativas": ["O buraco", "O balde", "A caixa", "A piscina"]
-    },
-    "O que é o que é que tem muitos dentes, mas não morde?": {
-        "resposta_correta": "O pente.",
-        "alternativas": ["O pente", "O sapato", "O relógio", "A escova"]
-    },
-    "O que é o que é que pode ser visto, mas nunca tocado?": {
-        "resposta_correta": "O espelho.",
-        "alternativas": ["O espelho", "A luz", "A sombra", "A lua"]
-    },
-    "O que é o que é que sempre sobe, mas nunca desce?": {
-        "resposta_correta": "A idade.",
-        "alternativas": ["A idade", "O balão", "A escada", "A fumaça"]
-    },
-    "O que é o que é que você pode segurar com uma mão, mas nunca com as duas?": {
-        "resposta_correta": "O cotovelo.",
-        "alternativas": ["O cotovelo", "A mão", "A cabeça", "O coração"]
-    },
-    "O que é o que é que sempre está na sua frente, mas nunca pode ser visto?": {
-        "resposta_correta": "O futuro.",
-        "alternativas": ["O futuro", "O espelho", "O passado", "A sombra"]
-    },
-    "O que é o que é que você nunca deve comer antes de ser servido?": {
-        "resposta_correta": "O prato.",
-        "alternativas": ["O prato", "O copo", "A comida", "O garfo"]
-    },
-    "O que é o que é que tem asas, mas não voa?": {
-        "resposta_correta": "O ventilador.",
-        "alternativas": ["O ventilador", "O pássaro", "A borboleta", "O avião"]
-    }
-}
-
-# Função para exibir charada, alternativas e verificar resposta
-def jogar_charada():
-    for charada, dados in charadas_com_alternativas.items():
-        print(f"\nCharada: {charada}")
-        
-        # Embaralha as alternativas, mas mantém a resposta correta
-        alternativas = dados["alternativas"]
-        alternativas_copia = alternativas[:]
-        random.shuffle(alternativas_copia)
-
-        # Exibe as alternativas embaralhadas
-        for i, alternativa in enumerate(alternativas_copia, 1):
-            print(f"{i}. {alternativa}")
-        
-        # Pede a resposta do usuário
-        try:
-            resposta_usuario = int(input("\nEscolha a alternativa (1, 2, 3, ou 4): "))
-            
-            # Verifica se a escolha está entre 1 e 4
-            if resposta_usuario not in [1, 2, 3, 4]:
-                print("Número inválido! Escolha entre 1 e 4.")
-                continue
-
-            # Obtém a resposta escolhida pelo usuário
-            resposta_escolhida = alternativas_copia[resposta_usuario - 1]
-
-            # Verifica se a resposta está correta
-            if resposta_escolhida == dados["resposta_correta"]:
-                print("Resposta correta! 🎉")
-            else:
-                print(f"Resposta errada! A resposta correta é: {dados['resposta_correta']}")
-        
-        except ValueError:
-            print("Por favor, digite um número válido entre 1 e 4.")
-
-# Iniciar o jogo de charadas
-jogar_charada()
-
-
-import random
-
-
-numero = random.randrange(1,10)
-escolha =  int(input('ecolha um número de 1 à 2000 --> '))
-
-
-if numero == escolha:
-    print('Você ganhou o jogo!🫵 😁 ')
-    print('O numero aleatrorio é ', numero)
-else:
-    print('Errou feio! ☠️🧐')    
-    print('O numero aleatrorio é ', numero)
+    print(f"{cliente3_nome} fez uma escolha inválida de quarto!")
