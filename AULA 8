@@ -1,0 +1,67 @@
+# ***1: Verificando se o número é par ou ímpar***
+
+num = int(input("Digite um número: "))
+
+match num % 2:
+    case 0:
+        print("O número é par.")
+    case 1:
+        print("O número é ímpar.")
+
+# -----------------------------------------------------
+
+# ***2: Verificando se um número é positivo, negativo ou zero***
+
+numero = float(input("\nDigite outro número: "))
+
+match numero:
+    case n if n > 0:
+        print("O número é positivo.")
+    case n if n < 0:
+        print("O número é negativo.")
+    case _:
+        print("O número é zero.")
+
+# -----------------------------------------------------
+
+# ***3: Verificando se uma string é vazia ou não***
+
+texto = input("\nDigite uma palavra (ou deixe vazio): ")
+
+match texto:
+    case "" | " ":
+        print("A string está vazia.")
+    case _:
+        print("A string não está vazia.")
+
+# -----------------------------------------------------
+
+# ***4: Verificando se um número é maior, menor ou igual a 10***
+
+valor = float(input("\nDigite um número para comparar com 10: "))
+
+match valor:
+    case n if n > 10:
+        print("O número é maior que 10.")
+    case n if n < 10:
+        print("O número é menor que 10.")
+    case _:
+        print("O número é igual a 10.")
+
+# -----------------------------------------------------
+
+# ***5: Classificando idade em faixas etárias***
+
+idade = int(input("\nDigite sua idade: "))
+
+match idade:
+    case n if n <= 12:
+        print("Criança")
+    case n if n <= 17:
+        print("Adolescente")
+    case n if n <= 35:
+        print("Jovem")
+    case n if n < 65:
+        print("Adulto")
+    case _:
+        print("Idoso")
