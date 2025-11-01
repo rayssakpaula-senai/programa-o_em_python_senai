@@ -1,11 +1,202 @@
+# Peça para o usuário digitar um número e verifique se é positivo, negativo ou zero.
 
-print("Olá, qual é o seu nome?")
-nome = input("Digite seu nome: ")
-print(f"Olá, {nome}! Como você está?")
-nome = input("responda como está: ")
-import random
+num = float(input("Digite um número: "))
 
-# Dicionário com novas charadas, respostas corretas e alternativas
+if num > 0:
+    print("O número é positivo.")
+elif num < 0:
+    print("O número é negativo.")
+else:
+    print("O número é zero.")
+
+# 2*
+# Peça para o usuário digitar a idade e verifique se a pessoa pode votar.
+
+idade = int(input("\nDigite sua idade: "))
+
+if idade >= 16:
+    print("Você pode votar.")
+else:
+    print("Você ainda não pode votar.")
+
+# 3*
+# Declare uma variável com um número e determine se é par ou ímpar.
+
+numero = int(input("\nDigite um número para verificar se é par ou ímpar: "))
+
+if numero % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+
+# 4*
+# Usuário digita 3 números para formar um triângulo e o programa identifica o tipo.
+
+a = float(input("\nDigite o lado A do triângulo: "))
+b = float(input("Digite o lado B do triângulo: "))
+c = float(input("Digite o lado C do triângulo: "))
+
+# Primeiro, verifica se é possível formar um triângulo
+if (a < b + c) and (b < a + c) and (c < a + b):
+    if a == b == c:
+        print("Triângulo equilátero.")
+    elif a == b or a == c or b == c:
+        print("Triângulo isósceles.")
+    else:
+        print("Triângulo escaleno.")
+else:
+    print("Os valores informados não formam um triângulo.")
+
+# 5*
+# Determine se um número é múltiplo de 5 e 7.
+
+num = int(input("\nDigite um número: "))
+
+if num % 5 == 0 and num % 7 == 0:
+    print("O número é múltiplo de 5 e 7.")
+else:
+    print("O número NÃO é múltiplo de 5 e 7.")
+
+# 6*
+# Verifique se um número é positivo e maior que 10.
+
+n = float(input("\nDigite um número: "))
+
+if n > 0 and n > 10:
+    print("O número é positivo e maior que 10.")
+else:
+    print("O número não é positivo e maior que 10 ao mesmo tempo.")
+
+# 7*
+# Verifique se um número é divisível por 3 ou 5.
+
+valor = int(input("\nDigite um número: "))
+
+if valor % 3 == 0 or valor % 5 == 0:
+    print("O número é divisível por 3 ou por 5.")
+else:
+    print("O número não é divisível por 3 nem por 5.")
+
+
+    estoque = {
+    'frutas':{
+        'uvas':
+              {'quantidade':30,
+               'preço':10.55,
+               },
+        'bananas':{
+                'quantidade':20,
+                'preço':15.25
+
+        },
+     
+        },
+    'eletronicos':{
+        'fone':{
+                'quantidade':10,
+                'preço':500.55
+        },
+        'iphone':{
+                'quantidade':5,
+                'preço':17000
+        }
+
+    }
+    
+    }
+
+
+carrinho =  []
+total =  []
+
+senha =  '280408'
+login = '@RAX'
+
+dig_senha =  input('Digite sua senha: ')
+dig_login =  input('Digite seu login: ')
+
+if dig_login == login and dig_senha == senha:
+    print('Seja bem vindo(a))')
+    pedir  =  input('Deseja fazer o pedido: sim ou não?')
+    if pedir == 'sim':
+        print('estoque: ', 'estoque, escolha se produto: ')
+        secao = input('Digite a seção -  frutas ou eletronicos')
+        produto =  input(f'escolha o produto{estoque[secao]} ')
+        print('Produto:', estoque[secao][produto])
+        carrinho.append(produto)
+        total.append(estoque[secao][produto]['preço'])
+        
+        estoque[secao][produto]['quantidade'] - 1
+        print(estoque)
+
+        print('CArrinho', carrinho)
+        print('R$', total)
+        print('------------------------')
+        formapag = ['1 PIX', '2 - CC', '3 - CD']
+        pag =  int(input('Digite a forma de pagamento: '))
+        print('FORMA DE PAGAMENTO', formapag[pag])
+
+    else:
+        print('Obrigada volte sempre')    
+else:
+    print('Algo foi digitado errado... tente novamente')
+
+
+    import random 
+
+ppt_maquina  =  ['🧻','🪨','✂️']
+ppt_jogador  =  ['🧻','🪨','✂️']
+
+aleatorio = random.choice(ppt_maquina)
+escolha  =  int(input('''
+0 - 🧻
+1 - 🪨
+2 - ✂️
+'''))
+
+if aleatorio == ppt_jogador[escolha]:
+    print('EMPATE!')
+    print('A maquina escolheu', aleatorio)
+    print('Você escolheu', ppt_jogador[escolha])
+
+elif aleatorio == '🧻'  and   ppt_jogador[escolha] == '🪨':
+    print('O computador ganhou!')
+    print('A maquina escolheu', aleatorio)
+    print('Você escolheu', ppt_jogador[escolha])    
+
+
+elif aleatorio == '🪨' and  ppt_jogador[escolha] == '✂️':
+    print('O computador ganhou!')
+    print('A maquina escolheu', aleatorio)
+    print('Você escolheu', ppt_jogador[escolha]) 
+
+
+elif aleatorio == '✂️'  and   ppt_jogador[escolha] == '🧻':
+    print('O computador ganhou!')
+    print('A maquina escolheu', aleatorio)
+    print('Você escolheu', ppt_jogador[escolha]) 
+
+
+
+
+elif  ppt_jogador[escolha] == '🧻'  and  aleatorio == '🪨':
+    print('Você ganhou!')
+    print('A maquina escolheu', aleatorio)
+    print('Você escolheu', ppt_jogador[escolha])    
+
+elif ppt_jogador[escolha] == '🪨'  and   aleatorio == '✂️':
+    print('Você ganhou!')
+    print('A maquina escolheu', aleatorio)
+    print('Você escolheu', ppt_jogador[escolha]) 
+
+
+elif ppt_jogador[escolha] == '✂️'  and   aleatorio  == '🧻':
+    print('Você ganhou!')
+    print('A maquina escolheu', aleatorio)
+    print('Você escolheu', ppt_jogador[escolha])
+
+
+    # Dicionário com novas charadas, respostas corretas e alternativas
 charadas_com_alternativas = {
     "O que é o que é que tem cabeça, mas não pensa?": {
         "resposta_correta": "O alfinete.",
@@ -87,3 +278,17 @@ def jogar_charada():
 # Iniciar o jogo de charadas
 jogar_charada()
 
+
+import random
+
+
+numero = random.randrange(1,10)
+escolha =  int(input('ecolha um número de 1 à 2000 --> '))
+
+
+if numero == escolha:
+    print('Você ganhou o jogo!🫵 😁 ')
+    print('O numero aleatrorio é ', numero)
+else:
+    print('Errou feio! ☠️🧐')    
+    print('O numero aleatrorio é ', numero)
