@@ -1,0 +1,58 @@
+# 1️⃣ Verifica se o número é positivo, negativo ou zero
+numero = float(input("Digite um número: "))
+if numero > 0:
+    print("O número é positivo.")
+elif numero < 0:
+    print("O número é negativo.")
+else:
+    print("O número é zero.")
+
+# 2️⃣ Verifica se a pessoa pode votar
+idade = int(input("Digite sua idade: "))
+if idade >= 16:
+    print("Você pode votar.")
+else:
+    print("Você não pode votar ainda.")
+
+# 3️⃣ Verifica se o número é par ou ímpar
+num = int(input("Digite um número: "))
+if num % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+
+# 4️⃣ Verifica o tipo de triângulo
+a = float(input("Digite o primeiro lado: "))
+b = float(input("Digite o segundo lado: "))
+c = float(input("Digite o terceiro lado: "))
+
+if a == b == c:
+    print("O triângulo é equilátero.")
+elif a == b or b == c or a == c:
+    print("O triângulo é isósceles.")
+else:
+    print("O triângulo é escaleno.")
+
+# 5️⃣ Verifica se o número é múltiplo de 5 e 7
+num = int(input("Digite um número: "))
+if num % 5 == 0 and num % 7 == 0:
+    print("O número é múltiplo de 5 e 7.")
+else:
+    print("O número não é múltiplo de 5 e 7.")
+
+# 6️⃣ Verifica se o número é positivo e maior que 10
+num = float(input("Digite um número: "))
+if num > 10:
+    print("O número é positivo e maior que 10.")
+elif num > 0:
+    print("O número é positivo, mas não é maior que 10.")
+else:
+    print("O número não é positivo.")
+
+# 7️⃣ Verifica se o número é divisível por 3 ou 5
+num = int(input("Digite um número: "))
+if num % 3 == 0 or num % 5 == 0:
+    print("O número é divisível por 3 ou 5.")
+else:
+    print("O número não é divisível por 3 nem por 5.")
+    
